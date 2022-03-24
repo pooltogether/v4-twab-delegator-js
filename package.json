@@ -1,0 +1,84 @@
+{
+  "name": "@pooltogether/v4-twab-delegator-js",
+  "author": "PoolTogether Inc.",
+  "module": "dist/v4-twab-delegator-js.esm.js",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/pooltogether/issues",
+    "email": "bugs@pooltogether.com"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "homepage": "https://github.com/pooltogether/v4-twab-delegator-js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch --onSuccess \"yalc push\"",
+    "reinstall": "rm -rf node_modules && yarn install",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "test:watch": "tsdx test --watch",
+    "test:coverage": "tsdx test --coverage",
+    "lint": "tsdx lint src",
+    "lint:fix": "tsdx lint src --fix",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "docs": "yarn docs:md ; yarn docs:clean",
+    "docs:md": "yarn typedoc --plugin typedoc-plugin-markdown --entryDocument index.md --hideBreadcrumbs true --namedAnchors false --out docs/md",
+    "docs:html": "yarn typedoc --plugin none --out docs/app src/index.ts ",
+    "docs:clean": "node ./scripts/docsFindAndReplace.js ; node ./scripts/docsCleanup.js"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "quoteProps": "consistent",
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": true,
+    "arrowParens": "always",
+    "trailingComma": "none"
+  },
+  "size-limit": [
+    {
+      "path": "dist/v4-twab-delegator-js.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/v4-twab-delegator-js.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^5.0.3",
+    "@types/lodash.memoize": "^4.1.6",
+    "husky": "^7.0.2",
+    "replace-in-files": "^3.0.0",
+    "size-limit": "^5.0.3",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typedoc": "^0.22.10",
+    "typedoc-plugin-markdown": "^3.11.11",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@ethersproject/abi": "^5.1.0",
+    "@pooltogether/etherplex": "^1.1.4",
+    "@pooltogether/utilities": "^0.3.9",
+    "eth-permit": "^0.2.1",
+    "ethers": "^5.4.6"
+  }
+}
