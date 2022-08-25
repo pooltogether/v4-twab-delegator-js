@@ -16,7 +16,7 @@
   ],
   "homepage": "https://github.com/pooltogether/v4-twab-delegator-js",
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "scripts": {
     "start": "tsdx watch --onSuccess \"yalc push\"",
