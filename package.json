@@ -78,7 +78,7 @@
     "@ethersproject/abi": "^5.1.0",
     "@pooltogether/etherplex": "^1.1.4",
     "@pooltogether/evm-chains-extended": "0.7.2-beta.4",
-    "@pooltogether/utilities": "0.5.2-beta.1",
+    "@pooltogether/utilities": "0.5.2-beta.2",
     "eth-permit": "^0.2.1",
     "ethers": "^5.4.6"
   }
