@@ -9,8 +9,8 @@ export const TICKET: {
     decimals: string
   }
 } = Object.freeze({
-  [NETWORK.rinkeby]: {
-    address: '0x325E456e8Ac0bCB65a5515FA70B6b9D581809c36',
+  [NETWORK.goerli]: {
+    address: '0x8537C5a9AAd3ec1D31a84e94d19FcFC681E83ED0',
     symbol: 'TICK',
     name: 'Ticket',
     decimals: '6'
@@ -51,8 +51,8 @@ export const TICKET: {
     name: 'PoolTogether aOptUSDC Ticket',
     decimals: '6'
   },
-  [NETWORK['optimism-kovan']]: {
-    address: '0xF567588A82660F9F93059E97063360900387a2cc',
+  [NETWORK['optimism-goerli']]: {
+    address: '0x8537C5a9AAd3ec1D31a84e94d19FcFC681E83ED0',
     symbol: 'TICK',
     name: 'Ticket',
     decimals: '6'

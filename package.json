@@ -2,7 +2,7 @@
   "name": "@pooltogether/v4-twab-delegator-js",
   "author": "PoolTogether Inc.",
   "module": "dist/v4-twab-delegator-js.esm.js",
-  "version": "0.2.0",
+  "version": "0.2.1-beta.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -16,7 +16,7 @@
   ],
   "homepage": "https://github.com/pooltogether/v4-twab-delegator-js",
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "scripts": {
     "start": "tsdx watch --onSuccess \"yalc push\"",
@@ -77,7 +77,8 @@
   "dependencies": {
     "@ethersproject/abi": "^5.1.0",
     "@pooltogether/etherplex": "^1.1.4",
-    "@pooltogether/utilities": "^0.5.0",
+    "@pooltogether/evm-chains-extended": "0.7.2-beta.4",
+    "@pooltogether/utilities": "0.5.2-beta.2",
     "eth-permit": "^0.2.1",
     "ethers": "^5.4.6"
   }
